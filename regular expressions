@@ -1,0 +1,7 @@
+import re
+s=input("enter a string=")
+v=r"[A-Z]{3}\d{9}"
+if(re.match(v,s)):
+    print("valid")
+else:
+    print("invalid")

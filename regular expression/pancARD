@@ -1,0 +1,19 @@
+import re
+
+pan_pattern = r'^[A-Z]{5}[0-9]{4}[A-Z]$'
+
+def is_valid_pan(pan):
+    return bool(re.match(pan_pattern, pan))
+
+# Test the function
+pans = [
+    "ABCDE1234F",  # Valid PAN
+    "ABCD1234F",   # Invalid PAN (less than 5 alphabets)
+    "ABCDE12345F", # Invalid PAN (more than 4 digits)
+    "ABCDE1234FG", # Invalid PAN (last character is not an alphabet)
+    "12345ABCDE",  # Invalid PAN (starts with digits)
+    "ABCDE1234F6"  # Invalid PAN (extra character)
+]
+
+for pan in pans:
+    print(f"{pan}: {is_valid_pan(pan)}")

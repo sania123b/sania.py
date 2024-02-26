@@ -1,0 +1,15 @@
+# Get input from user
+n = int(input())
+my_list = []
+
+# Loop through n numbers and append to list
+for i in range(n):
+    num = int(input())
+    my_list.append(num)
+
+# Create a list of tuples with the number and its cube
+tup_list = [(num, num**3) for num in my_list]
+
+# Print the list of tuples
+for tup in tup_list:
+    print(tup)

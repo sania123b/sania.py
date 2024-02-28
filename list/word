@@ -1,0 +1,7 @@
+l=["saqlain","bannu","ajmath","pasha"]
+a=input("enter letter=")
+for i in range(0,len(l)):
+    b=(l[i].startswith("a",0,len(l)))
+    if(b==True):
+        print(l[i])
+    

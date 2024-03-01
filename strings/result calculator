@@ -1,0 +1,26 @@
+def calculate_result(exam1_score, exam2_score, sports_score, activity_scores):
+    # Weightage for each component
+    exam_weightage = 0.5
+    sports_weightage = 0.2
+    activity_weightage = 0.3
+    
+    # Calculate total activity score
+    total_activity_score = sum(activity_scores) / len(activity_scores)
+    
+    # Calculate total result
+    total_result = (exam1_score + exam2_score) * exam_weightage + sports_score * sports_weightage + total_activity_score * activity_weightage
+    
+    return total_result
+
+# Example usage:
+exam1_score = float(input("Enter score for exam 1: "))
+exam2_score = float(input("Enter score for exam 2: "))
+sports_score = float(input("Enter score for sports event: "))
+
+activity_scores = []
+for i in range(3):
+    activity_scores.append(float(input("Enter score for activity {}: ".format(i + 1))))
+
+# Calculate the result
+result = calculate_result(exam1_score, exam2_score, sports_score, activity_scores)
+print("The student's result is:", result)

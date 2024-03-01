@@ -1,0 +1,8 @@
+def change_char(string):
+    first_char = string[0]
+    modified_string = first_char + string[1:].replace(first_char, '$')
+    return modified_string
+
+input_string = input("Enter a string: ")
+result_string = change_char(input_string)
+print("Modified string:", result_string)

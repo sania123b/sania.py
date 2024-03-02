@@ -1,0 +1,36 @@
+import numpy as np
+
+# Creating arrays
+array1 = np.array([1, 2, 3, 4, 5])
+array2 = np.array([6, 7, 8, 9, 10])
+
+# Array arithmetic operations
+sum_array = array1 + array2
+difference_array = array2 - array1
+product_array = array1 * array2
+quotient_array = array2 / array1
+
+print("Array 1:", array1)
+print("Array 2:", array2)
+print("Sum:", sum_array)
+print("Difference:", difference_array)
+print("Product:", product_array)
+print("Quotient:", quotient_array)
+
+# Mathematical functions
+print("Sum of array1:", np.sum(array1))
+print("Mean of array2:", np.mean(array2))
+print("Max value in array1:", np.max(array1))
+print("Min value in array2:", np.min(array2))
+print("Standard deviation of array1:", np.std(array1))
+
+# Array manipulation
+array3 = np.arange(12).reshape(3, 4)  # Creating a 3x4 array
+print("Original array:")
+print(array3)
+print("Transposed array:")
+print(np.transpose(array3))
+
+# Boolean operations
+bool_array = array1 > 3
+print("Boolean array based on condition (array1 > 3):", bool_array)

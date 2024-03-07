@@ -1,0 +1,16 @@
+def find_frequency(tup):
+    frequency_dict = {}
+    
+    for item in tup:
+        if item in frequency_dict:
+            frequency_dict[item] += 1
+        else:
+            frequency_dict[item] = 1
+            
+    print("Frequency of elements:")
+    for key, value in frequency_dict.items():
+        print(key, ":", value)
+
+# Test the function
+t = (1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
+find_frequency(t)

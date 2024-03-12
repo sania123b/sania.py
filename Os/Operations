@@ -1,0 +1,22 @@
+import os
+
+# Get the current working directory
+current_dir = os.getcwd()
+print("Current directory:", current_dir)
+
+# List files and directories in a directory
+dir_path = "/path/to/your/directory"
+contents = os.listdir(dir_path)
+print("Contents of the directory:", contents)
+
+# Create a new directory
+new_dir = "/path/to/your/new/directory"
+os.mkdir(new_dir)
+print("New directory created at:", new_dir)
+
+# Check if a file or directory exists
+file_path = "/path/to/your/file_or_directory"
+if os.path.exists(file_path):
+    print("File or directory exists.")
+else:
+    print("File or directory does not exist.")

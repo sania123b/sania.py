@@ -1,0 +1,31 @@
+def max_present_days(N, S):
+    max_present = S.count('1')  # count the days Alice was already present
+    max_absent = 0
+    current_absent = 0
+    max_absent_length = 0
+    
+    for i in range(N):
+        if S[i] == '0':
+            current_absent += 1
+        else:
+            max_absent_length = max(max_absent_length, current_absent)
+            current_absent = 0
+    
+    max_absent_length = max(max_absent_length, current_absent)
+    
+    if max_absent_length == 0:
+        return max_present
+    
+    if max_absent_length == 1:
+        return max_present + 1
+    
+    return max_present + max_absent_length
+
+# Input
+T = int(input())
+for _ in range(T):
+    N = int(input())
+    S = input()
+    
+    # Output
+    print(max_present_days(N, S))

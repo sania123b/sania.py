@@ -1,0 +1,6 @@
+try:
+    # Code block where an exception might occur
+    x = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError:
+    # Code block to handle the exception
+    print("Error: Division by zero occurred")

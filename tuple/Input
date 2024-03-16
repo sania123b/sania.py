@@ -1,0 +1,22 @@
+def parse_tuples_input():
+    tuples_list = []
+    while True:
+        try:
+            # Get input from the user
+            input_str = input("Enter a tuple (format: x y), or type 'done' to finish: ")
+            # Check if the user wants to finish entering tuples
+            if input_str.lower() == 'done':
+                break
+            # Split the input into individual elements
+            elements = input_str.split()
+            # Convert elements to appropriate data types (e.g., int, float)
+            tuple_item = tuple(map(int, elements))  # Adjust data type as needed
+            tuples_list.append(tuple_item)
+        except ValueError:
+            print("Invalid input. Please enter a tuple in the format 'x y'.")
+
+    return tuples_list
+
+# Example usage:
+my_list_of_tuples = parse_tuples_input()
+print("List of tuples:", my_list_of_tuples)

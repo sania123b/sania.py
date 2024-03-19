@@ -1,0 +1,19 @@
+try:
+    # Code that may raise an exception
+    x = int(input("Enter a number: "))
+    y = 10 / x
+except ValueError:
+    # Handle the ValueError exception (if user inputs a non-integer)
+    print("Error: Please enter a valid integer.")
+except ZeroDivisionError:
+    # Handle the ZeroDivisionError exception (if user inputs 0)
+    print("Error: Division by zero!")
+except Exception as e:
+    # Handle any other type of exception
+    print("An error occurred:", e)
+else:
+    # Execute if no exception occurs
+    print("Division result:", y)
+finally:
+    # Execute regardless of whether an exception occurred
+    print("End of program.")

@@ -1,0 +1,8 @@
+def is_palindrome(s):
+    s = s.lower()  # Convert the string to lowercase
+    s = ''.join(char for char in s if char.isalnum())  # Remove non-alphanumeric characters
+    return s == s[::-1]  # Check if the string is equal to its reverse
+
+# Example usage:
+print(is_palindrome("radar"))  # Output: True
+print(is_palindrome("hello"))  # Output: False

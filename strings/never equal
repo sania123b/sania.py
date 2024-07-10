@@ -1,0 +1,15 @@
+for t in range(int(input())):
+    n,m=map(int,input().split())
+    a=input()
+    b=input()
+    p=len(a)
+    l=len(b)
+    m=[]
+    v=[]
+    for i in range(p-l+1):
+        m.append(a[i:i+l])
+    print(m)    
+    for i in m:
+        d=sum(1 for x, y in zip(i, b) if x != y)
+        v.append(d)
+    print(min(v))    
